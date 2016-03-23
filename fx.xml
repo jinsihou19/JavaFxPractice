@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<project name="APP" default="default" basedir=".">
+    <taskdef name="bundleapp"
+             classname="com.oracle.appbundler.AppBundlerTask"
+             classpath="lib/appbundler-1.0.jar"/>
+    <target name="buildAPP">
+        <bundleapp outputdirectory="/Users/jinsihou/Project/tools/fx/out/artifacts/fx"
+                   name="APP"
+                   displayname="APP"
+                   identifier="APP.main"
+                   shortversion="1.0"
+                   applicationCategory="public.app-category.developer-tools"
+                   mainclassname="sample.Main">
+            <classpath file="/Users/jinsihou/Project/tools/fx/out/artifacts/fx/fx.jar"/>
+            <option value="-Dapple.laf.useScreenMenuBar=false"/>
+        </bundleapp>
+    </target>
+</project>
